@@ -3,6 +3,8 @@
   environment = {
     systemPackages = with pkgs; [
       sddm-chili-theme
+      greetd.tuigreet
+      hyprland
     ];
   };
 
@@ -23,7 +25,7 @@
     gnome.gnome-keyring.enable = true;
 
     xserver = {
-      videoDrivers = [ "nvidia" ];
+      videoDrivers = [ "nvidia"];
       wacom.enable = true;
     };
    
@@ -36,22 +38,26 @@
       };
     };
 
-    greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "/bin/tuigreet --time --time-format '%a, %d %b %Y • %T' --greeting  '[Become \n          Visible]' --asterisks --remember --cmd Hyprland";
-        user = "greeter";
-      };
-    };
-  };
+    # greetd = {
+    #     enable = true;
+    #     settings = {
+    #       initial_session = {
+    #         command = "${pkgs.hyprland}/bin/Hyprland";
+    #         user = "user";
+    #       };
+    #       default_session = {
+    #         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --greeting 'Welcome to NixOS!' --asterisks --remember --remember-user-session --time -cmd ${pkgs.hyprland}/bin/Hyprland";
+    #         user = "greeter";
+    #       };
+    #     };
+    #   };
 
-#    displayManager.sddm = {
-#      enable = true;
-#      wayland.enable = true;
-#      autoNumlock = true;
-#      theme = "chili";
-#    };
+   displayManager.sddm = {
+     enable = true;
+     wayland.enable = true;
+     autoNumlock = true;
+     theme = "chili";
+   };
   };
 
   xdg.portal = {   # Needed for OBS window capture.
