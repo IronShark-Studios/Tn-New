@@ -2,8 +2,8 @@
 
   nixpkgs = {
     overlays = [
-      outputs.overlays.additions
-      outputs.overlays.modifications
+     # outputs.overlays.additions
+     # outputs.overlays.modifications
     ];
 
     config = {
