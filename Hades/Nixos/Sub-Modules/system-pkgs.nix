@@ -5,6 +5,7 @@
 # System level packages available to all users
       wget
       unzip
+      vlc
       alsa-utils
     ];
   };
