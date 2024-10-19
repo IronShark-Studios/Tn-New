@@ -11,10 +11,10 @@
     ./Sub-Modules/display-server.nix
     ./Sub-Modules/network.nix
     ./Sub-Modules/virtualization.nix
-    ../../Shared/Scripts/rebuild.nix
-    ../../Shared/Scripts/test.nix
-    ../../Shared/Scripts/upgrade.nix
-    ../../Shared/Scripts/update-archives.nix
+    ../../Layers/Scripts/rebuild.nix
+    ../../Layers/Scripts/test.nix
+    ../../Layers/Scripts/upgrade.nix
+    ../../Layers/Scripts/update-archives.nix
   ];
 
   boot = {

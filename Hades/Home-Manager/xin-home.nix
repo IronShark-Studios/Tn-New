@@ -2,15 +2,15 @@
 
   imports = [
     ./hyprland.nix
-    ../../Shared/Emacs/emacs.nix
-    ../../Shared/XDG/user-dirs.nix
-    ../../Shared/Terminal/terminal.nix
-    ../../Shared/Firefox/firefox.nix
-    ../../Shared/System-Tools/systemTools.nix
-    ../../Shared/Social-Tools/socialTools.nix
-    ../../Shared/Accounting-Tools/accountingTools.nix
-    ../../Shared/Art-Tools/artTools.nix
-    ../../Shared/FFXIV/ffxiv.nix
+    ../../Layers/Emacs/emacs.nix
+    ../../Layers/XDG/user-dirs.nix
+    ../../Layers/Terminal/terminal.nix
+    ../../Layers/Firefox/firefox.nix
+    ../../Layers/System-Tools/systemTools.nix
+    ../../Layers/Social-Tools/socialTools.nix
+    ../../Layers/Accounting-Tools/accountingTools.nix
+    ../../Layers/Art-Tools/artTools.nix
+    ../../Layers/FFXIV/ffxiv.nix
   ];
 
   programs.home-manager.enable = true;
