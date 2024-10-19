@@ -37,13 +37,13 @@
     # Accessible through 'nix build', 'nix shell', etc
 
     # Your custom packages and modifications, exported as overlays
-    overlays = import ./Flake/Overlays {inherit inputs;};
+  #   overlays = import ./Flake/Overlays {inherit inputs;};
     # Reusable nixos modules you might want to export
     # These are usually stuff you would upstream into nixpkgs
-    nixosModules = import ./Flake/Modules/Nixos;
+  #   nixosModules = import ./Flake/Modules/Nixos;
     # Reusable home-manager modules you might want to export
     # These are usually stuff you would upstream into home-manager
-    homeManagerModules = import ./Flake/Modules/Home-Manager;
+  #   homeManagerModules = import ./Flake/Modules/Home-Manager;
 
     # NixOS configuration entrypoint
     nixosConfigurations = {
