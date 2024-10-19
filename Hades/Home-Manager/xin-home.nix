@@ -18,16 +18,13 @@
   home = {
     username = "xin";
     homeDirectory = "/home/xin";
-    stateVersion = "24.05";
+    stateVersion = "23.11";
   };
 
   nixpkgs = {
     overlays = [
-      outputs.overlays.additions
-      outputs.overlays.modifications
-      outputs.overlays.static-nxpkgs
-      outputs.overlays.static-hmpkgs
-      inputs.emacs-community.overlay
+    #  outputs.overlays.additions
+    #  outputs.overlays.modifications
     ];
 
     config = {

@@ -10,7 +10,7 @@
 
   programs.emacs = {
     enable = true;
-    package = pkgs.emacs-unstable-pgtk;
+ #   package = pkgs.emacs-unstable-pgtk;
     extraPackages = epkgs: [ epkgs.vterm ];
   };
 
@@ -29,7 +29,6 @@
       silver-searcher
       openscad-lsp
       languagetool
-      nixfmt-rfc-style
       shfmt
       shellcheck
       pandoc

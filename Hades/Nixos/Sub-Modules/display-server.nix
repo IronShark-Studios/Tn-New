@@ -19,7 +19,7 @@
   services = {
     blueman.enable = true;
     udisks2.enable = true;
-    libinput.enable = true;
+  #  libinput.enable = true;
     gnome.gnome-keyring.enable = true;
 
     xserver = {
@@ -36,12 +36,22 @@
       };
     };
 
-    displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-      autoNumlock = true;
-      theme = "chili";
+    greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "/bin/tuigreet --time --time-format '%a, %d %b %Y • %T' --greeting  '[Become \n          Visible]' --asterisks --remember --cmd Hyprland";
+        user = "greeter";
+      };
     };
+  };
+
+#    displayManager.sddm = {
+#      enable = true;
+#      wayland.enable = true;
+#      autoNumlock = true;
+#      theme = "chili";
+#    };
   };
 
   xdg.portal = {   # Needed for OBS window capture.

@@ -5,10 +5,9 @@
       lf
       ueberzug
       graphicsmagick
-      ffmpeg_7-full
+      ffmpeg-full
       ffmpegthumbnailer
       imagemagick
-      epub-thumbnailer
       ghostscript
       bat
       chafa

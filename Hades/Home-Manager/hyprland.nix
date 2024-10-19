@@ -177,7 +177,7 @@
   home.packages = with pkgs; [
     mako
     waylock
-    hyprshot
+    # hyprshot
     hyprpicker
     wl-clipboard
     wtype
