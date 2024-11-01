@@ -45,11 +45,16 @@
     };
   };
 
+  environment = {
+    etc.secrets.source = ./Secrets;
+    pathsToLink = [ "/share/zsh" ];
+  };
+
   users = {
     mutableUsers = false;
     users = {
       root = {
-        hashedPasswordFile = "./root-usrPasswd.nix";
+        hashedPasswordFile = "/etc/secrets/root-usrPasswd.nix";
       };
 
       xin = {
@@ -57,7 +62,7 @@
         openssh.authorizedKeys.keys = [ ];
         extraGroups = [ "wheel" ];
         shell = pkgs.zsh;
-        hashedPasswordFile = "./xin-usrPasswd.nix";
+        hashedPasswordFile = "/etc/secrets/xin-usrPasswd.nix";
       };
     };
   };
