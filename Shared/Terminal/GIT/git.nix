@@ -12,7 +12,6 @@
       "#*#"
       "\#*\#"
       ".*.swp"
-      ".key"
     ];
     aliases = {
       send = ''
@@ -40,5 +39,4 @@
   home.packages = with pkgs; [
     git-crypt
   ];
-
 }

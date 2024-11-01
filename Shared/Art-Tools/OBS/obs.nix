@@ -8,9 +8,6 @@
       slurp
       grim
       vlc
-      leela-zero
-      maven
-      zulu
     ];
   };
 }
