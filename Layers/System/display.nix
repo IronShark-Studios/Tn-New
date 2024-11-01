@@ -39,26 +39,10 @@
     };
   };
 
-  sound = {
-    enable = true;
-    mediaKeys.enable = true;
-  };
-
- services.xserver.videoDrivers = [ "nvidia" ];
-
   hardware = {
     pulseaudio.enable = false;
     bluetooth.enable = true;
-    opengl.enable = true;
+    graphics.enable = true;
     xpadneo.enable = true;
-
-    nvidia = {
-      modesetting.enable = true;
-      prime = {
-        sync.enable = true;
-        nvidiaBusId = "PCI:01:00:0";  # Found with lspci | grep VGA
-        intelBusId = "PCI:00:02:0";  # Found with lspci | grep VGA
-      };
-    };
   };
 }
