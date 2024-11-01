@@ -38,7 +38,7 @@
       specialArgs = { inherit inputs outputs; };
       modules = [
         home-manager.nixosModules.home-manager
-        ./Thanatos/NixOS/configuration.nix
+        ./Thanatos/configuration.nix
       ];
     };
 
