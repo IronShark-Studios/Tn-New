@@ -13,7 +13,6 @@
     ../Layers/System/utf.nix
     ../Layers/System/virtualization.nix
     ../Layers/System/display.nix
-    ../Layers/System/gpu.nix
     ../Layers/Scripts/rebuild.nix
     ../Layers/Scripts/test.nix
     ../Layers/Scripts/upgrade.nix
