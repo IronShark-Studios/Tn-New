@@ -25,6 +25,15 @@
   homeManagerModules = import ./Flake/Modules/Home-Manager;
 
   nixosConfigurations = {
+
+    Hades = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs outputs; };
+      modules = [
+        home-manager.nixosModules.home-manager
+        ./Hades/NixOS/configuration.nix
+      ];
+    };
+
     Thanatos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs outputs; };
       modules = [
@@ -32,6 +41,7 @@
         ./Thanatos/NixOS/configuration.nix
       ];
     };
+
   };
 };
 }
