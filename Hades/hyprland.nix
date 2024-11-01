@@ -73,10 +73,6 @@
             preserve_split = yes # you probably want this
         }
 
-        master {
-            new_is_master = true
-        }
-
         gestures {
             workspace_swipe = off
         }
@@ -163,7 +159,6 @@
         bind = $mainMod, l, resizeactive, 0 10
 
         bind = $mainMod, M, fullscreen, 0
-        bind = $mainMod SHIFT, M, fakefullscreen
 
         bindm = $mainMod, mouse:272, movewindow
         bindm = $mainMod, mouse:273, resizewindow
