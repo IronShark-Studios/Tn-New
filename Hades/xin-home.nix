@@ -9,15 +9,15 @@
   imports = [
     ./hyprland.nix
     ./waybar.nix
-    ../Layers/Emacs/emacs.nix
+    ../Layers/User/Emacs/emacs.nix
     ../Layers/User/xdg.nix
     ../Layers/User/Terminal/terminal.nix
     ../Layers/User/Firefox/firefox.nix
     ../Layers/User/System-Tools/systemTools.nix
-    ../Layers/Social-Tools/socialTools.nix
-    ../Layesr/Accounting-Tools/accountingTools.nix
-    ../Layers/Art-Tools/artTools.nix
-    ../Layers/Games/ffxiv.nix
+    ../Layers/User/Social-Tools/socialTools.nix
+    ../Layesr/User/Accounting-Tools/accountingTools.nix
+    ../Layers/User/Art-Tools/artTools.nix
+    ../Layers/User/Games/ffxiv.nix
   ];
 
   programs.home-manager.enable = true;
