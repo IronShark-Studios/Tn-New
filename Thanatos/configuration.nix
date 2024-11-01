@@ -5,7 +5,6 @@
   networking.hostName = "Hades";
 
   imports = [
-    ./gpu.nix
     ./hardware-configuration.nix
     ../Layers/System/systemd.nix
     ../Layers/System/network.nix

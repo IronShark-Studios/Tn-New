@@ -4,6 +4,7 @@
     packages = with pkgs; [
     slack
     discord
+    thunderbird
     ];
   };
 }
