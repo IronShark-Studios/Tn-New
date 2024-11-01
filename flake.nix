@@ -30,7 +30,7 @@
       specialArgs = { inherit inputs outputs; };
       modules = [
         home-manager.nixosModules.home-manager
-        ./Hades/NixOS/configuration.nix
+        ./Hades/configuration.nix
       ];
     };
 
