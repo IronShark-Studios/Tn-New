@@ -7,8 +7,8 @@
   };
 
   imports = [
-    ../Layers/User/Wayland/hyprland.nix
-    ../Layers/User/Wayland/waybar.nix
+    ./hyprland.nix
+    ./waybar.nix
  #   ../../Shared/Emacs/emacs.nix
     ../Layers/User/xdg.nix
     ../Layers/User/Terminal/terminal.nix
