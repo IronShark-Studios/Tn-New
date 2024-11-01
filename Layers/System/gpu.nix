@@ -3,9 +3,8 @@
  services.xserver.videoDrivers = [ "nvidia" ];
 
  hardware.nvidia = {
-
+   package = config.boot.kernelPackages.nvidiaPackages.stable;
    modesetting.enable = true;
-
    prime = {
      sync.enable = true;
      nvidiaBusId = "PCI:01:00:0";  # Found with lspci | grep VGA
