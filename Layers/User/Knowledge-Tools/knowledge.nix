@@ -12,5 +12,6 @@ in {
     obsidian
     anki
     zotero
+    rclone
     ];
 }
