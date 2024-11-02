@@ -60,7 +60,7 @@
       xin = {
         isNormalUser = true;
         openssh.authorizedKeys.keys = [ ];
-        extraGroups = [ "wheel" ];
+        extraGroups = [ "wheel" "docker" ];
         shell = pkgs.zsh;
         hashedPasswordFile = "/etc/secrets/xin-usrPasswd.nix";
       };

@@ -1,4 +1,9 @@
-{ inputs, outputs, lib, config, pkgs, ... }: {
+{ inputs, outputs, lib, config, pkgs, ... }: 
+
+let
+  zen = pkgs.callPackage (import ./Zen/zen.nix) {};
+
+in {
 
   imports = [
     ./tridactyl.nix
@@ -8,8 +13,10 @@
 
   programs.firefox = {
     enable = true;
-    package = pkgs.firefox.override {
-      cfg.enableTridactylNative = true;
-    };
+    nativeMessagingHosts = [ pkgs.tridactyl-native ];
   };
+
+  home.packages = with pkgs; [
+  zen
+  ];
 }

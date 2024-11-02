@@ -15,9 +15,11 @@
     ../Layers/User/Firefox/firefox.nix
     ../Layers/User/System-Tools/systemTools.nix
     ../Layers/User/Social-Tools/socialTools.nix
-    ../Layesr/User/Accounting-Tools/accountingTools.nix
+    ../Layers/User/Accounting-Tools/accountingTools.nix
     ../Layers/User/Art-Tools/artTools.nix
     ../Layers/User/Games/ffxiv.nix
+    ../Layers/User/Knowledge-Tools/knowledge.nix
+    ../Layers/User/Baduk-Tools/baduk.nix
   ];
 
   programs.home-manager.enable = true;

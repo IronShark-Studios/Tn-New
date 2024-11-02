@@ -6,11 +6,9 @@ let
 
 in {
 
-  hardware.opentabletdriver.enable = true;
-
   imports = [
     ./Graphviz/graphviz.nix
-    ./Cura/cura.nix
+  #  ./Cura/cura.nix   # 20241101 package currently broken
     ./OBS/obs.nix
     ./OpenSCAD/openscad.nix
     ./Inkscape/inkscape.nix
@@ -22,6 +20,5 @@ in {
   home.packages = with pkgs; [
     pureref
     allusion
-    anki
     ];
 }

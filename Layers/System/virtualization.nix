@@ -10,6 +10,7 @@
         ovmf.packages = [ pkgs.OVMFFull.fd ];
       };
     };
+    docker.enable = true;
     spiceUSBRedirection.enable = true;
   };
 
@@ -20,6 +21,8 @@
     spice-gtk
     spice-protocol
     virt-viewer
+    docker
+    distrobox
   ];
 
   programs = {

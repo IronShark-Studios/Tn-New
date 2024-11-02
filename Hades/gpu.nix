@@ -11,7 +11,8 @@
      nvidiaBusId = "PCI:01:00:0";  # Found with lspci | grep VGA
      intelBusId = "PCI:00:02:0";  # Found with lspci | grep VGA
    };
-
  };
+
+  hardware.opentabletdriver.enable = true;
 
 }

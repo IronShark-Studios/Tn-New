@@ -4,7 +4,7 @@
     "hyprland.conf" = {
       target = ".config/hypr/hyprland.conf";
       text = ''
-        exec-once = waybar & waypaper --restore & mako & emacs --daemon & udiskie -asFN & hyprctl dispatch workspace 1
+        exec-once = waybar & mako & emacs --daemon & udiskie -asFN & hyprctl dispatch workspace 1
         exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
         exec-once = otd-daemon
 
@@ -16,7 +16,7 @@
         monitor = eDP-1, 1920x1080@60, -1920x540, 1
 
         workspace = 1 ,monitor:DP-1
-        workspace = 10 ,monitor:eDP-1
+        workspace = 9 ,monitor:eDP-1
 
         input {
             kb_layout = us
@@ -84,17 +84,13 @@
 
         $mainMod = SUPER
 
-        bind = $mainMod, S, exec, firefox
-        bind = $mainMod SHIFT, S, exec, emacsclient -c -e "(eww-browse-url \"$(wl-paste)\")"
+        bind = $mainMod, S, exec, zen
+        bind = $mainMod SHIFT, S, exec, thunderbird
 
-        bind = $mainMod SHIFT, T, exec, emacsclient -c -e "(term \".nix-profile/bin/zsh\")"
+        bind = $mainMod, E, exec, obsidian
+
+
         bind = $mainMod, T, exec, alacritty
-
-        bind = $mainMod, P, exec, emacsclient -c
-        bind = $mainMod, F, exec, alacritty -e lf
-
-        bind = $mainMod, h, exec, emacsclient -c ~/Projects/Technonomicon/README.org
-
 
         bind = $mainMod, C, exec, emacsclient -c -e '(full-calc)'
         bind = $mainMod SHIFT, C, exec, rofi -show calc -modi calc -no-show-match -no-sort
