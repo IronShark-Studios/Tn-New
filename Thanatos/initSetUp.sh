@@ -2,7 +2,8 @@
 
 echo "This script is meant to be run after the initial set up"
 echo "of the local system and WebBrowser"
-echo "including downloading app-images from Google Drive."
+echo "including downloading of app-images"
+echo "and encryption keys from Google Drive"
 echo "Please press enter to continue"
 read -r ConfirmationInput
 echo
@@ -12,6 +13,7 @@ cd ~
 mkdir ~/.ssh
 mkdir ~/Projects
 mkdir ~/Media
+mkdir ~/G-Drive
 echo
 
 echo "Creating System SSH-Key"
@@ -49,9 +51,19 @@ cd ~tn/Thanatos/NixOS
 rm ./hardware-configuration.nix
 cp /etc/nixos/hardware-configuration.nix ./hardware-configuration.nix
 
+echo
+echo "Home Directory Set Up Complete, configuring R-clone connection"
+echo
+echo "This link must be opened with chromium"
+rclone config create G-Drive drive
+echo
+echo "Please press enter to continue"
+echo "after confirming login"
+read -r ConfirmationInput
+echo
+
 echo "Updating and Rebuilding System"
 Upgrade
 Rebuild
 
-echo
-echo "Home Directory Set Up Complete Please Rebuild"
+echo "system set up complete, please reboot"
