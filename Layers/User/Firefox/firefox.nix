@@ -18,5 +18,6 @@ in {
 
   home.packages = with pkgs; [
   zen
+  chromium
   ];
 }
